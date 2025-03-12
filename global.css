@@ -10,6 +10,7 @@
     --hover-color2: #f0f4fc;
     --gradient-color: linear-gradient(45deg, var(--accent-color), var(--accent-color2));
     --gradient-color2: linear-gradient(15deg, #1a7e47, #1a7e47, #52CB89, #91DEB4, #52CB89, #1a7e47, #1a7e47) no-repeat;
+    --navBar-bottom-color: rgb(233, 233, 233);
     --header-color: linear-gradient(45deg, var(--accent-color), var(--accent-color2));
     --mode-toggle-color: #15171d;
 
@@ -78,6 +79,7 @@
     --hover-color2: #f0f4fc;
     --nav-link-color: white;
     --gradient-color: linear-gradient(45deg, var(--accent-color), var(--accent-color2));
+    --navBar-bottom-color: #10131b;
     --header-color: linear-gradient(15deg, #1a7e47, #1a7e47, #52CB89, #91DEB4, #52CB89, #1a7e47, #1a7e47) no-repeat;
     --mode-toggle-color: #52CB89;
 }
@@ -160,7 +162,7 @@ nav{
     justify-content: space-between;
     background-color: var(--base-color);
     align-items: center;
-    border-bottom: solid 2px white;
+    border-bottom: solid 2px var(--navBar-bottom-color);
 }
 
 
