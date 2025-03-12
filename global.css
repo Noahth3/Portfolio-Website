@@ -117,7 +117,7 @@ nav{
 }
 
 .logo-text{
-    background: var(--gradient-color);
+    background: var(--header-color);
     background-size: cover;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -480,14 +480,15 @@ nav{
 
 header{
     width: 90%;
-    height: 120vh;
-    height: 120dvh;
+    height: 100vh;
+    height: 100dvh;
     margin: auto;
     display: grid;
     align-items: center;
 }
 
 .header-content{
+    margin-top: 9rem;
     width: fit-content;
     height: 50vh;
     display: inline-block;
@@ -540,9 +541,38 @@ header{
 }
 
 @media screen and (max-width: 1024px){
+    header{
+        width: 90%;
+        margin: auto;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .header-content{
+        text-align: center;
+    }
     
 }
 
 @media screen and (max-width: 768px){
+    .header-content{
+        margin-top: 9rem;
+        width: fit-content;
+        height: 50vh;
+        display: inline-block;
+    }
     
+    .header-text{
+        font-size: 1.5rem;
+        font-weight: 450;
+        color: var(--text-color);
+    }
+    .header-text-name{
+        font-size: 3.5rem;
+    }
+    
+    .header-text-title{
+        font-size: 1.5rem;
+    }
 }
