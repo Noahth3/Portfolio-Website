@@ -542,9 +542,6 @@ header{
 
 @media screen and (max-width: 1024px){
     header{
-        width: 90%;
-        margin: auto;
-        display: grid;
         justify-content: center;
         align-items: center;
     }
@@ -569,7 +566,7 @@ header{
         color: var(--text-color);
     }
     .header-text-name{
-        font-size: 3.5rem;
+        font-size: 3rem;
     }
     
     .header-text-title{
