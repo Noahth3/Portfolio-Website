@@ -1,0 +1,117 @@
+:root{
+    --base-color: white;
+    --text-color: #111528;
+    --secondary-text: #232738;
+    --primary-color: #3a435d;
+    --accent-color: #52CB89;
+    --accent-color2: #1a7e47;
+    --nav-link-color: #232738;
+    --hover-color: #272832;
+    --hover-color2: #f0f4fc;
+    --gradient-color: linear-gradient(45deg, var(--accent-color), var(--accent-color2));
+    --gradient-color2: linear-gradient(15deg, #1a7e47, #1a7e47, #52CB89, #91DEB4, #52CB89, #1a7e47, #1a7e47) no-repeat;
+    --mode-toggle-color: #15171d;
+
+    --font-h1-desktop-size: 56px;
+    --font-h2-desktop-size: 48px;
+    --font-h3-desktop-size: 36px;
+    --font-subh-desktop-size: 16px;
+    --font-p1-desktop-size: 18px;
+    --font-p2-desktop-size: 16px;
+    --font-btn-desktop-size: 16px;
+    --font-btn-desktop-size: 14px;
+
+    --font-h1-tablet-size: 48px;
+    --font-h2-tablet-size: 40px;
+    --font-h3-tablet-size: 28px;
+    --font-subh-desktop-size: 16px;
+    --font-p1-tablet-size: 18px;
+    --font-p2-tablet-size: 16px;
+    --font-btn-tablet-size: 16px;
+    --font-btn-tablet-size: 14px;
+
+    --font-h1-mobile-size: 40px;
+    --font-h2-mobile-size: 32px;
+    --font-h3-mobile-size: 20px;
+    --font-subh-desktop-size: 16px;
+    --font-p1-mobile-size: 16px;
+    --font-p2-mobile-size: 14px;
+    --font-btn-mobile-size: 16px;
+    --font-btn-mobile-size: 14px;
+
+    --font-nav-links: 1.1rem;
+    --font-nav-logo: 2.5rem;
+
+    --border-radius1: 4px;
+    --border-radius2: 8px;
+    --border-radius3: 16px;
+    --border-radius4: 20px;
+    --border-radius5: 40px;
+    --border-radius6: 50px;
+
+    --spacing1: 0.5rem;
+    --spacing2: 1rem;
+    --spacing3: 1.5rem;
+    --spacing4: 2rem;
+    --spacing5: 2.5rem;
+    --spacing6: 3rem;
+    --spacing7: 3.5rem;
+    --spacing8: 4rem;
+    --spacing9: 4.5rem;
+    --spacing10: 5rem;
+
+    --small-button-pading: 0.5em 1em;
+    --medium-button-padding: 1em 1.5em;
+    --large-button-padding: 1.5em 2em;
+
+}
+
+.darkmode{
+    --base-color: #15171d;
+    --text-color: white;
+    --secondary-text: #3a435d;
+    --primary-color: #e8e9ed;
+    --accent-color: #52CB89;
+    --accent-color2: #1a7e47;
+    --hover-color: #272832;
+    --hover-color2: #f0f4fc;
+    --nav-link-color: white;
+    --gradient-color: linear-gradient(45deg, var(--accent-color), var(--accent-color2));
+    --mode-toggle-color: #52CB89;
+}
+
+/* ---------------------LANDING PAGE CONTAINER--------------------- */
+.header-text{
+    background: var(--gradient-color);
+    background-size: cover;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+/* ---------------------LANDING PAGE CONTAINER--------------------- */
+
+
+
+/* ---------------------BENTO GRID CONTAINER--------------------- */
+
+/* ---------------------PROJECTS--------------------- */
+/* ---------------------PROJECTS--------------------- */
+
+/* ---------------------INTERNSHIPS--------------------- */
+/* ---------------------INTERNSHIPS--------------------- */
+
+/* ---------------------BENTO GRID CONTAINER--------------------- */
+
+
+/* --------------------- MOBILE RESPONSIVE --------------------- */
+@media screen and (min-width: 1440px){
+    
+}
+
+
+@media screen and (max-width: 1024px){
+    
+}
+
+@media screen and (max-width: 768px){
+    
+}

@@ -10,6 +10,7 @@
     --hover-color2: #f0f4fc;
     --gradient-color: linear-gradient(45deg, var(--accent-color), var(--accent-color2));
     --gradient-color2: linear-gradient(15deg, #1a7e47, #1a7e47, #52CB89, #91DEB4, #52CB89, #1a7e47, #1a7e47) no-repeat;
+    --header-color: linear-gradient(45deg, var(--accent-color), var(--accent-color2));
     --mode-toggle-color: #15171d;
 
     --font-h1-desktop-size: 56px;
@@ -77,6 +78,7 @@
     --hover-color2: #f0f4fc;
     --nav-link-color: white;
     --gradient-color: linear-gradient(45deg, var(--accent-color), var(--accent-color2));
+    --header-color: linear-gradient(15deg, #1a7e47, #1a7e47, #52CB89, #91DEB4, #52CB89, #1a7e47, #1a7e47) no-repeat;
     --mode-toggle-color: #52CB89;
 }
 
@@ -112,14 +114,6 @@ nav{
     width:100%;
 }
 
-header{
-    top:0;
-    width: 100%;
-    z-index: 1000;
-    position: fixed;
-    background-color: var(--base-color);
-}
-
 .logo-text{
     background: var(--gradient-color);
     background-size: cover;
@@ -136,10 +130,26 @@ header{
     flex-direction: row-reverse;
 }
 
-button{
+.big-button{
     all: unset;
     padding: var(--spacing2) var(--spacing3);
-    border-radius: var(--spacing2);
+    color: white;
+    padding: var(--small-button-pading);
+    border-radius: var(--border-radius4);
+    cursor: pointer;
+    font-weight: bold;
+    background: var(--gradient-color2);
+    background-size: 300%;
+    background-position: left center;
+    box-shadow: 0 30px 10px -20px rgba(0,0,0,.2);
+    transition: background .3s ease;
+    transition: all 400ms ease-in-out;
+    z-index: 10;
+}
+
+.big-button:hover {
+    background-size: 320%;
+    background-position: right center;
 }
 
 /* ---------------------NAV CONTAINER--------------------- */
@@ -148,6 +158,7 @@ button{
     min-height: 70px;
     display: flex;
     justify-content: space-between;
+    background-color: var(--base-color);
     align-items: center;
     border-bottom: solid 2px white;
 }
@@ -178,6 +189,7 @@ button{
 /* ----- LOGO ----- */
 
 #theme-switch{
+    all: unset;
     margin-right: -1.5rem;
     height: 50px;
     width: 50px;
@@ -191,6 +203,7 @@ button{
 
 #theme-switch svg{
     fill: var(--mode-toggle-color);
+    cursor: pointer;
 }
 
 #theme-switch svg:last-child{
@@ -220,7 +233,7 @@ button{
 }
 
 #active-link{
-    background: var(--gradient-color2);
+    background: var(--header-color);
     background-size: cover;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -233,17 +246,6 @@ button{
 
 .nav-links:hover{
     color:var(--accent-color)
-}
-
-.nav-item:after{
-    position: absolute;
-    content: "";
-    display: block;
-    color:#1a7e47;
-    height: 2px;
-    left: 50%;
-    transition: all 0.3s ease-in-out;
-    width: 0;
 }
 
 .nav-item:hover:after{
@@ -292,6 +294,10 @@ button{
 /* ---------------NAV CONTENT--------------- */
 
 /* ---------------------NAV CONTAINER--------------------- */
+
+/* --------------------- FOOTER --------------------- */
+/* --------------------- FOOTER --------------------- */
+
 
 
 /* --------------------- MOBILE RESPONSIVE --------------------- */
@@ -463,4 +469,78 @@ button{
         top:0;
 
     }
+}
+
+
+
+
+/* ---------------------LANDING PAGE CONTAINER--------------------- */
+
+header{
+    width: 90%;
+    height: 120vh;
+    height: 120dvh;
+    margin: auto;
+    display: grid;
+    align-items: center;
+}
+
+.header-content{
+    width: fit-content;
+    height: 50vh;
+    display: inline-block;
+    text-align: left;
+}
+
+.header-text{
+    font-size: 2rem;
+    font-weight: 450;
+    color: var(--text-color);
+}
+.header-text-name{
+    font-size: 4.5rem;
+    font-weight: 900;
+    background: var(--header-color);
+    background-size: cover;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.header-text-title{
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+#header-button{
+    margin-top: var(--spacing3);
+}
+
+/* ---------------------LANDING PAGE CONTAINER--------------------- */
+
+
+
+/* ---------------------BENTO GRID CONTAINER--------------------- */
+
+/* ---------------------PROJECTS--------------------- */
+/* ---------------------PROJECTS--------------------- */
+
+/* ---------------------INTERNSHIPS--------------------- */
+/* ---------------------INTERNSHIPS--------------------- */
+
+/* ---------------------BENTO GRID CONTAINER--------------------- */
+
+
+/* --------------------- MOBILE RESPONSIVE --------------------- */
+
+@media screen and (min-width: 1440px){
+    
+}
+
+@media screen and (max-width: 1024px){
+    
+}
+
+@media screen and (max-width: 768px){
+    
 }
