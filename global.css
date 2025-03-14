@@ -496,12 +496,12 @@ header{
 }
 
 .header-text{
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 450;
     color: var(--text-color);
 }
 .header-text-name{
-    font-size: 4.5rem;
+    font-size: 5.5rem;
     font-weight: 900;
     background: var(--header-color);
     background-size: cover;
@@ -510,13 +510,14 @@ header{
 }
 
 .header-text-title{
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 600;
     color: var(--text-color);
 }
 
 #header-button{
     margin-top: var(--spacing3);
+    font-size: 1.2rem;
 }
 
 /* ---------------------LANDING PAGE CONTAINER--------------------- */
@@ -552,7 +553,7 @@ header{
     
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 680px){
     .header-content{
         margin-top: 9rem;
         width: fit-content;
@@ -571,5 +572,9 @@ header{
     
     .header-text-title{
         font-size: 1.5rem;
+    }
+
+    #header-button{
+        font-size: 1rem;
     }
 }
