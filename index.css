@@ -1,3 +1,5 @@
+/* ------------------------------------ VARIABLES ------------------------------------ */
+
 :root{
     --base-color: white;
     --text-color: #111528;
@@ -5,11 +7,15 @@
     --primary-color: #3a435d;
     --accent-color: #52CB89;
     --accent-color2: #1a7e47;
+    --glass-effect: rgba(255, 255, 255, 0.15);
+    --border-color: rgba(233, 233, 233, 0.4);
     --nav-link-color: #232738;
     --hover-color: #272832;
     --hover-color2: #f0f4fc;
     --gradient-color: linear-gradient(45deg, var(--accent-color), var(--accent-color2));
     --gradient-color2: linear-gradient(15deg, #1a7e47, #1a7e47, #52CB89, #91DEB4, #52CB89, #1a7e47, #1a7e47) no-repeat;
+    --navBar-bottom-color: rgb(233, 233, 233);
+    --header-color: linear-gradient(45deg, var(--accent-color), var(--accent-color2));
     --mode-toggle-color: #15171d;
 
     --font-h1-desktop-size: 56px;
@@ -73,45 +79,693 @@
     --primary-color: #e8e9ed;
     --accent-color: #52CB89;
     --accent-color2: #1a7e47;
+    --border-color: #ffffff10;
     --hover-color: #272832;
     --hover-color2: #f0f4fc;
     --nav-link-color: white;
     --gradient-color: linear-gradient(45deg, var(--accent-color), var(--accent-color2));
+    --navBar-bottom-color: #10131b;
+    --header-color: linear-gradient(15deg, #1a7e47, #1a7e47, #52CB89, #91DEB4, #52CB89, #1a7e47, #1a7e47) no-repeat;
     --mode-toggle-color: #52CB89;
 }
 
-/* ---------------------LANDING PAGE CONTAINER--------------------- */
-.header-text{
+/* ------------------------------------ VARIABLES ------------------------------------ */
+
+
+
+
+/* ------------------------------------ GLOBAL ------------------------------------ */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-family: Poppins, "Segoe UI", sans-serif;
+}
+
+body {
+    text-wrap: balance;
+    min-height: 100vh;
+    min-height: 100dvh;
+    background: var(--base-color);
+    color: var(--text-color)
+}
+
+a{
+    text-decoration: none;
+    color:var(--nav-link-color);
+}
+
+.h1-text{
     background: var(--gradient-color);
     background-size: cover;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+    font-size: var(--font-h1-desktop-size);
+    font-weight: bolder;
+    text-align: center;
 }
-/* ---------------------LANDING PAGE CONTAINER--------------------- */
+
+p{
+    color: var(--text-color);
+}
+
+nav{
+    width:100%;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.logo-text{
+    background: var(--header-color);
+    background-size: cover;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.flex-container{
+    display: flex;
+}
+
+.flex-container-reverse{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.big-button{
+    all: unset;
+    padding: var(--spacing2) var(--spacing3);
+    color: white;
+    padding: var(--small-button-pading);
+    border-radius: var(--border-radius4);
+    cursor: pointer;
+    font-weight: bold;
+    background: var(--gradient-color2);
+    background-size: 300%;
+    background-position: left center;
+    box-shadow: 0 30px 10px -20px rgba(0,0,0,.2);
+    transition: background .3s ease;
+    transition: all 400ms ease-in-out;
+    z-index: 10;
+}
+
+.big-button:hover {
+    background-size: 320%;
+    background-position: right center;
+}
+
+@media screen and (max-width: 1024px){
+    .h1-text{
+        font-size: var(--font-h1-tablet-size);
+    }
+}
+
+@media screen and (max-width: 680px){
+    .h1-text{
+        font-size: var(--font-h1-mobile-size);
+    }
+}
+
+/* ------------------------------------ GLOBAL ------------------------------------ */
 
 
 
-/* ---------------------BENTO GRID CONTAINER--------------------- */
 
-/* ---------------------PROJECTS--------------------- */
-/* ---------------------PROJECTS--------------------- */
+/* ------------------------------------ NAV CONTAINER ------------------------------------ */
 
-/* ---------------------INTERNSHIPS--------------------- */
-/* ---------------------INTERNSHIPS--------------------- */
+.navbar{
+    position: fixed;
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--base-color);
+    align-items: center;
+    border-bottom: solid 2px var(--navBar-bottom-color);
+    z-index: 1000000;
+}
 
-/* ---------------------BENTO GRID CONTAINER--------------------- */
-
-
-/* --------------------- MOBILE RESPONSIVE --------------------- */
-@media screen and (min-width: 1440px){
+/* -------------- NAV CONTENT -------------- */
+.nav-content{
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    margin-right: 3rem;
     
+}
+
+/* ----- LOGO ----- */
+.logo-container{
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+    font-size: var(--font-nav-logo);
+}
+
+#logo{
+    font-size: var(--font-nav-logo);
+    font-weight:650;
+}
+
+/* ----- LOGO ----- */
+
+#theme-switch{
+    all: unset;
+    margin-right: -1.5rem;
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--base-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#theme-switch svg{
+    fill: var(--mode-toggle-color);
+    cursor: pointer;
+}
+
+#theme-switch svg:last-child{
+    display: none;
+}
+
+.darkmode #theme-switch svg:first-child{
+    display: none;
+}
+
+.darkmode #theme-switch svg:last-child{
+    display: block;
+}
+
+/* ----- MENU ----- */
+.nav-menu{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.nav-item{
+    font-size: 1.15rem;
+    font-weight: 600;
+    transition: all 0.5s ease;
+}
+
+#active-link{
+    background: var(--header-color);
+    background-size: cover;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-weight: 800;
+}
+
+.nav-links{
+    transition: all 0.45s ease;
+}
+
+.nav-links:hover{
+    color:var(--accent-color)
+}
+
+.nav-item:hover:after{
+    width: 100%;
+    left: 0;
+}
+
+.contact-btn {
+    color: white;
+    padding: var(--small-button-pading);
+    border-radius: var(--border-radius4);
+    cursor: pointer;
+    font-weight: bold;
+    background: var(--gradient-color2);
+    background-size: 300%;
+    background-position: left center;
+    box-shadow: 0 30px 10px -20px rgba(0,0,0,.2);
+    transition: background .3s ease;
+    transition: all 400ms ease-in-out;
+    z-index: 10;
+}
+
+.contact-btn:hover {
+    background-size: 320%;
+    background-position: right center;
+}
+/* ----- MENU ----- */
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+
+.bar{
+    display:block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 2rem;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--primary-color);
+}
+
+/* -------------- NAV CONTENT -------------- */
+
+@media screen and (min-width: 1440px){
+    .logo-container{
+        margin-left: 3rem;
+    }
+
+    .nav-content{
+        margin-right: 6rem;
+    }
 }
 
 
 @media screen and (max-width: 1024px){
+    .logo-container{
+        font-size: 2.5rem;
+    }
     
+    #logo{
+        font-size: 2.5rem;
+    }
+
+    .hamburger{
+        display:block;
+        z-index: 1000;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-content{
+        position: fixed;
+        left: -100%;
+        top:0;
+        height: 100%;
+        gap:1rem;
+        flex-direction: column;
+        background-color: var(--base-color);
+        border-right: solid 1px grey;
+        width: 50%;
+        text-align: center;
+        transition: 0.5s ease;
+        border-radius: 0px 0px 15px 15px;
+        z-index: 100;
+    }
+
+    #theme-switch{
+        margin-right: 0;
+        margin-top: 1rem;
+        margin-bottom: -1.5rem;
+        height: 50px;
+        width: 50px;
+        padding: 0;
+        border-radius: 35%;
+        background-color: var(--base-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-menu{
+        margin-top: var(--spacing4);
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-item{
+        font-size: 1.4rem;
+        margin: 16px 0;
+
+    }
+
+    .contact-btn{
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .nav-content.active{
+        left:0;
+        top:0;
+
+    }
 }
 
 @media screen and (max-width: 768px){
+    .logo-container{
+        font-size: 2rem;
+    }
+    
+    #logo{
+        font-size: 2rem;
+    }
+
+    .hamburger{
+        display:block;
+        z-index: 1000;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-content{
+        position: fixed;
+        left: -100%;
+        top:0;
+        height: 100%;
+        gap:1rem;
+        flex-direction: column;
+        background-color: var(--base-color);
+        border-right: none;
+        width: 100%;
+        text-align: center;
+        transition: 0.5s ease;
+        border-radius: 0px 0px 15px 15px;
+        z-index: 100;
+    }
+
+    #theme-switch{
+        margin-right: 0;
+        margin-top: 1rem;
+        margin-bottom: -1.5rem;
+        height: 50px;
+        width: 50px;
+        padding: 0;
+        border-radius: 50%;
+        background-color: var(--base-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-menu{
+        margin-top: var(--spacing4);
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-item{
+        margin: 16px 0;
+        font-size: 1.4rem;
+    }
+
+    .contact-btn{
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .nav-content.active{
+        left:0;
+        top:0;
+
+    }
+}
+
+/* ------------------------------------ NAV CONTAINER ------------------------------------ */
+
+
+
+
+/* ------------------------------------ WELCOME CONTAINER ------------------------------------ */
+
+header{
+    width: 90%;
+    height: 100vh;
+    height: 100dvh;
+    margin: auto;
+    display: grid;
+    align-items: center;
+}
+
+.header-content{
+    margin-top: 9rem;
+    width: fit-content;
+    height: 50vh;
+    display: inline-block;
+    text-align: left;
+}
+
+.header-text{
+    font-size: 3rem;
+    font-weight: 450;
+    color: var(--text-color);
+}
+.header-text-name{
+    font-size: 5.5rem;
+    font-weight: 900;
+    background: var(--header-color);
+    background-size: cover;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.header-text-title{
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+#header-button{
+    margin-top: var(--spacing3);
+    font-size: 1.2rem;
+}
+
+@media screen and (min-width: 1440px){
     
 }
+
+@media screen and (max-width: 1024px){
+    header{
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .header-content{
+        text-align: center;
+        margin-top: 15rem;
+    }
+    
+}
+
+@media screen and (max-width: 680px){
+    .header-content{
+        margin-top: 15rem;
+        width: fit-content;
+        height: 50vh;
+        display: inline-block;
+    }
+    
+    .header-text{
+        font-size: 1.5rem;
+        font-weight: 450;
+        color: var(--text-color);
+    }
+    .header-text-name{
+        font-size: 3rem;
+    }
+    
+    .header-text-title{
+        font-size: 1.5rem;
+    }
+
+    #header-button{
+        font-size: 1rem;
+    }
+}
+
+/* ------------------------------------ WELCOME CONTAINER ------------------------------------ */
+
+
+
+/* ------------------------------------ BENTO GRID CONTAINER ------------------------------------ */
+
+.bento-grid{
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-container{
+    width: 90%;
+    height: auto;
+    border-radius: var(--border-radius2);
+    padding: 2em;
+    margin: auto;
+    gap: 1em;
+    display: flex;
+}
+
+.row-1{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.row-2{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1em
+}
+
+.col{
+    flex: 1;
+    display: flex;
+    gap: 1em;
+}
+
+.col.col-2{
+    flex: 1;
+    display: flex;
+    transition: 0.3s ease-in-out;
+}
+
+.col-box{
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius2);
+    flex: 1;
+    background-color: var(--glass-effect);
+    backdrop-filter: blur(50px);
+    transition: 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.col-box:hover{
+    transform: scale(1.02);
+    border: 2px solid #ffffff50;
+
+    .bento-image{
+        transform: translateY(100px);
+    }
+
+    .bento-image2{
+        transform: translateY(90px);
+    }
+}
+
+.col-box2{
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius2);
+    flex: 1;
+    background-color: var(--glass-effect);
+    backdrop-filter: blur(50px);
+    transition: 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.col-box2:hover{
+    transform: scale(1.02);
+    border: 2px solid #ffffff50;
+    
+    .bento-image3{
+        transform: translateY(80px);
+    }
+}
+
+.bento-image{
+    margin: auto;
+    scale: 2;
+    transform: translateY(130px);
+    transition: 0.3s ease-in-out;
+}
+
+.bento-image2{
+    margin: auto;
+    scale: 1;
+    object-fit: contain;
+    transform: translateY(180px);
+    transition: 0.3s ease-in-out;
+}
+
+.bento-image3{
+    margin: auto;
+    scale: 1.5;
+    transform: translateY(100px);
+    transition: 0.3s ease-in-out;
+}
+
+
+@media screen and (max-width: 1024px){
+    .grid-container{
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    .row-1{
+        flex-direction: row;
+    }
+    
+    .row-2{
+        flex-direction: row;
+    }
+
+    .col{
+        flex: 1;
+        flex-direction: column;
+    }
+
+    .bento-image2{
+        scale: 2.5;
+        transform: translateX(30%);
+    }
+
+}
+
+@media screen and (max-width: 680px){
+    .grid-container{
+        max-height: 550px;
+        gap: 0.5em;
+    }
+
+    .row{
+        gap: 0.5em;
+    }
+
+    .col{
+        gap: 0.5em;
+        flex: 1;
+    }
+
+
+
+}
+/* ---------------------PROJECTS--------------------- */
+/* ---------------------PROJECTS--------------------- */
+
+/* ---------------------INTERNSHIPS--------------------- */
+/* ---------------------INTERNSHIPS--------------------- */
+
+/* ------------------------------------ BENTO GRID CONTAINER ------------------------------------ */
+
+
+
+
+/* ------------------------------------ FOOTER ------------------------------------ */
+/* ------------------------------------ FOOTER ------------------------------------ */
