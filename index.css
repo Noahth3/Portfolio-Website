@@ -613,7 +613,7 @@ header{
 
 .grid-container{
     width: 90%;
-    height: auto;
+    height: 650px;
     border-radius: var(--border-radius2);
     padding: 2em;
     margin: auto;
@@ -645,6 +645,7 @@ header{
     flex: 1;
     display: flex;
     transition: 0.3s ease-in-out;
+    overflow: hidden;
 }
 
 .col-box{
@@ -661,12 +662,8 @@ header{
     transform: scale(1.02);
     border: 2px solid #ffffff50;
 
-    .bento-image{
-        transform: translateY(100px);
-    }
-
-    .bento-image2{
-        transform: translateY(90px);
+    .bento-image-container{
+        transform: translateY(70%);
     }
 }
 
@@ -683,32 +680,18 @@ header{
 .col-box2:hover{
     transform: scale(1.02);
     border: 2px solid #ffffff50;
-    
-    .bento-image3{
-        transform: translateY(80px);
-    }
+}
+
+.bento-image-container{
+    width: fit-content;
+    height: fit-content;
+    transform: translateY(100%);
+    transition: 0.3s ease-in-out;
 }
 
 .bento-image{
-    margin: auto;
+    object-fit:fill;
     scale: 2;
-    transform: translateY(130px);
-    transition: 0.3s ease-in-out;
-}
-
-.bento-image2{
-    margin: auto;
-    scale: 1;
-    object-fit: contain;
-    transform: translateY(180px);
-    transition: 0.3s ease-in-out;
-}
-
-.bento-image3{
-    margin: auto;
-    scale: 1.5;
-    transform: translateY(100px);
-    transition: 0.3s ease-in-out;
 }
 
 
@@ -731,10 +714,6 @@ header{
         flex-direction: column;
     }
 
-    .bento-image2{
-        scale: 2.5;
-        transform: translateX(30%);
-    }
 
 }
 
