@@ -565,14 +565,14 @@ header{
 
 .socials-container{
     margin-top: 1rem;
-    justify-content: center;
+    justify-content:space-around;
     align-items: center;
 }
 
 .header-content svg{
     width: 25px;
     fill: var(--text-color);
-    margin-right: 1.5rem;
+    margin: 0.2rem;
 }
 
 .header-text-title{
@@ -648,9 +648,16 @@ header{
         font-size: 1.5rem;
     }
 
+    .header-content svg{
+        width: 20px;
+        fill: var(--text-color);
+        margin: 0.2rem;
+    }
+
     #header-button{
         font-size: 1rem;
     }
+
 }
 
 /* ------------------------------------ WELCOME CONTAINER ------------------------------------ */
@@ -662,6 +669,14 @@ header{
     justify-content: center;
     align-items: center;
     margin-bottom: 8em;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0px);
 }
 
 .project-grid{
@@ -750,7 +765,17 @@ header{
     justify-content: center;
     align-items: center;
     margin-bottom: 2em;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 1s;
 }
+
+.show {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+
 
 .about-content{
     width: 90%;
