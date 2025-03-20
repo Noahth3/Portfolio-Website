@@ -541,7 +541,6 @@ header{
 }
 
 .header-content{
-    margin-top: 9rem;
     width: fit-content;
     height: 50vh;
     display: inline-block;
@@ -986,7 +985,6 @@ header{
     justify-content: space-between;
 }
 
-
 .footer-col h4{
     font-size: 18px;
     color: var(--text-color);
@@ -1047,3 +1045,97 @@ header{
 
 
 /* ------------------------------------ FOOTER ------------------------------------ */
+
+.project-list{
+    transform: translateY(70px);
+}
+
+
+.list-container{
+    padding: 1em;
+    gap:2em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin: auto;
+}
+
+.list-card
+{
+    width: 80%;
+    height: 225px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius2);
+    background-color: var(--glass-effect);
+    backdrop-filter: blur(60px);
+    box-shadow: var(--box-shadow);
+    transition: all 0.3s ease-in-out;
+
+}
+
+.list-card:hover{
+    transform: scale(1.02);
+}
+
+.list-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    padding: 1em;
+    gap: 1.5em;
+}
+
+.list-content img{
+    width: 250px;
+    border-radius: var(--border-radius2);
+}
+
+.list-textbox-group{
+    margin: 0;
+}
+
+.list-textbox-group p{
+    text-wrap: wrap;
+}
+
+.list-right-group{
+    height:180px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.list-bottom-group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list-icons svg{
+    width: 25px;
+    fill: var(--text-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.list-button{
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+    font-size: small;
+    padding: 5px 8px;
+    border: solid 1px;
+    border-radius: var(--border-radius2);
+    cursor: pointer;
+    transition: all 400ms ease-in-out;
+}
+
+.list-button:hover{
+    background-color: var(--text-color);
+    color: var(--base-color);
+    transform: scale(0.99);
+}
