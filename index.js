@@ -34,12 +34,27 @@ const observer = new IntersectionObserver((entries) => {
     if (entry.isIntersecting){
       entry.target.classList.add('show');
     }
+  });
+});
+
+const observer1 = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry)
+    if (entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
     else{
       entry.target.classList.remove('show');
     }
   });
 });
 
+const hiddenHeaderElements = document.querySelectorAll(".header-content");
+const hiddenIconElements = document.querySelectorAll(".header-icon");
+hiddenHeaderElements.forEach((el) => observer.observe(el));
+hiddenIconElements.forEach((el) => observer.observe(el));
 
-const hiddenElements = document.querySelectorAll("section");
-hiddenElements.forEach((el) => observer.observe(el));
+const hiddenSectionElements = document.querySelectorAll("section");
+hiddenSectionElements.forEach((el) => observer1.observe(el));
+
+//------------------ 

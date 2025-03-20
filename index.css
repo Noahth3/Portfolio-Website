@@ -546,6 +546,9 @@ header{
     height: 50vh;
     display: inline-block;
     text-align: left;
+    transform: translateX(-5%);
+    opacity: 0;
+    transition: all 1s ease-in;
 }
 
 .header-text{
@@ -579,6 +582,24 @@ header{
     font-size: 1.8rem;
     font-weight: 350;
     color: var(--text-color);
+}
+
+.header-icon{
+    transform: translateX(-90%);
+    transition: all 1s ease-in;
+    opacity: 0;
+}
+
+.header-icon.icon2{
+    transition-delay: 200ms;
+}
+
+.header-icon.icon3{
+    transition-delay: 400ms;
+}
+
+.header-icon.icon4{
+    transition-delay: 600ms;
 }
 
 #header-button{
@@ -623,6 +644,11 @@ header{
     .header-content{
         text-align: center;
         margin-top: 15rem;
+        transform: translateY(5%);
+    }
+
+    .header-icon{
+        transform: translateY(90%);
     }
     
 }
@@ -959,6 +985,7 @@ header{
     max-width: 1000px;
     justify-content: space-between;
 }
+
 
 .footer-col h4{
     font-size: 18px;
