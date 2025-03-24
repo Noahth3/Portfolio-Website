@@ -141,6 +141,7 @@ h2{
 }
 
 h3{
+    font-weight: bold;
     font-size: var(--font-h3-desktop-size)
 }
 
@@ -1102,6 +1103,16 @@ header{
     transform: translateY(70px);
 }
 
+#project-list-h2{
+    margin: 2em;
+}
+
+#project-list-button{
+    color: var(--base-color);
+    background-color: white;
+    font-weight: bold;
+}
+
 
 .list-container{
     padding: 1em;
@@ -1154,11 +1165,14 @@ header{
 
 .list-textbox-group p{
     text-wrap: wrap;
+    color: var(--secondary-text);
 }
 
 .list-right-group{
-    height:180px;
+    height: 225px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 
@@ -1192,7 +1206,7 @@ header{
     transform: scale(0.99);
 }
 
-@media screen and (max-width: 850px){
+@media screen and (max-width: 950px){
 
     .list-card{
         width: 60%;
@@ -1203,6 +1217,10 @@ header{
         width: 100%;
         align-items: center;
         justify-content: space-between;
+    }
+
+    .list-right-group{
+        height: 175px;
     }
 
     .list-content img{
