@@ -49,6 +49,7 @@ const observer1 = new IntersectionObserver((entries) => {
   });
 });
 
+
 const hiddenHeaderElements = document.querySelectorAll(".header-content");
 const hiddenIconElements = document.querySelectorAll(".header-icon");
 hiddenHeaderElements.forEach((el) => observer.observe(el));
