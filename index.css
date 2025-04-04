@@ -119,6 +119,17 @@ body {
     color: var(--text-color)
 }
 
+main{
+    transform: translateY(70px);
+}
+
+section{
+    min-height: 100vh;
+    min-height: 100dvh;
+    justify-content: center;
+    align-items: center;
+}
+
 a{
     font-size: var(--font-btn-desktop-size);
     text-decoration: none;
@@ -173,13 +184,17 @@ img {
 }
 
 .flex-container{
-    width: 80%;
+    padding: 2em;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .flex-container-reverse{
-    width: 80%;
+    padding: 2em;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     flex-direction: row-reverse;
 }
 
@@ -287,6 +302,7 @@ img {
 /* ------------------------------------ NAV CONTAINER ------------------------------------ */
 
 .navbar{
+    top: 0;
     position: fixed;
     min-height: 70px;
     display: flex;
@@ -617,6 +633,7 @@ header{
 
 .header-pic{
     width: 300px;
+
 }
 
 .header-content{
@@ -864,8 +881,10 @@ header{
 
 /* ------------------------------------ ABOUT ------------------------------------ */
 
-#about-h{
-    margin-bottom: 0rem;
+
+#about-section{
+    min-height: 50vh;
+    min-height: 50dvh;
 }
 
 .about-container{
@@ -1126,152 +1145,83 @@ header{
 
 /* ------------------------------------ FOOTER ------------------------------------ */
 
-.list{
-    transform: translateY(70px);
-    min-height: 100vh;
-    min-height: 100dvh;
-}
-
-#list-h2{
-    margin: 2em;
-}
-
-.project-list-button{
-    height: fit-content;
-    width: 85%;
-    margin: auto;
-    transform: translateY(70px);
-}
-
-
 .list-container{
-    margin: auto;
-    gap:2em;
     width: 80%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, auto-fit);
-    gap: 1em;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    transform: translateY(50px);
-    opacity: 0;
-    transition: all 1s;
+    align-items: center;
 }
 
-.show {
-    opacity: 1;
-    transform: translateY(0px);
-}
-
-.list-card
-{
+.list-card{
     border: 2px solid var(--border-color);
     border-radius: var(--border-radius2);
     background-color: var(--glass-effect);
     backdrop-filter: blur(60px);
     box-shadow: var(--box-shadow);
     transition: all 0.3s ease-in-out;
-
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+}
+.list-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 1em;
+    gap: 2em;
 }
 
 .list-card:hover{
     transform: scale(1.02);
 }
 
-.list-content{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin: auto;
-    padding: 1em;
-    gap: 1.5em;
-}
 
 .list-content img{
-    width: 300px;
     border-radius: var(--border-radius2);
-}
-
-.list-textbox-group{
-    margin: 0;
-}
-
-.list-textbox-group p{
-    text-wrap: wrap;
-    color: var(--secondary-text);
+    width: 300px;
 }
 
 .list-right-group{
-    height: 225px;
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    
 }
 
-.list-bottom-group{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.list-icons svg{
-    width: 25px;
-    fill: var(--text-color);
-    transition: all 0.3s ease-in-out;
-}
-
-.list-button{
-    justify-content: center;
-    align-items: center;
-    color: var(--text-color);
-    font-size: small;
-    padding: 5px 0.5rem;
-    border: solid 1px;
-    border-radius: var(--border-radius2);
-    cursor: pointer;
+#list-button{
+    float: right;
     transition: all 400ms ease-in-out;
 }
 
-.list-button:hover{
+#list-button:hover{
     background-color: var(--text-color);
     color: var(--base-color);
     transform: scale(0.99);
 }
 
-@media screen and (max-width: 950px){
+@media screen and (max-width: 890px){
     .list-container{
-        padding: 1em;
-        margin: auto;
-        gap:2em;
-        width: 80%;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, 500px);
-        gap: 1.5em;
-        justify-content: center;
+        width: 70%;
+    }
+    .list-content{
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .list-right-group{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 2em;
     }
 
     .list-content img{
         width: 100%;
-        border-radius: var(--border-radius2);
-    }
-
-    .list-content{
-        flex-direction: column;
     }
 }
 
-@media screen and (max-width: 680px){
-    .list-container{
-        grid-template-columns: repeat(auto-fit, 300px);
-        width: 80%;
-    }
-
-    .list-textbox-group p{
-        font-size: 0.8rem;
-    }
-}
-
-.internship-list img{
+@media screen and (max-width: 600px){
     
 }
