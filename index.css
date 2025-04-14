@@ -783,7 +783,6 @@ header{
     width:100%;
     justify-content: center;
     align-items: center;
-    margin-bottom: 8em;
     transform: translateY(50px);
     opacity: 0;
     transition: all 1s;
@@ -1063,7 +1062,7 @@ header{
 
 .footer{
     background-color: var(--base-color);
-    margin-top: 5em;
+    margin-top: 10em;
     padding: 70px 0px;
 }
 
@@ -1201,6 +1200,10 @@ header{
     transform: scale(0.99);
 }
 
+#list-h2{
+    margin-top: 2em;
+}
+
 @media screen and (max-width: 890px){
     .list-container{
         width: 70%;
@@ -1225,3 +1228,64 @@ header{
 @media screen and (max-width: 600px){
     
 }
+
+.contact-box {
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius2);
+    background-color: var(--glass-effect);
+    backdrop-filter: blur(60px);
+    box-shadow: var(--box-shadow);
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    max-width: 500px;
+}
+
+.contact-container h2 {
+    color: var(--text-color);
+    text-align: center;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.project-intro-photo{
+    margin: auto;
+}
+
+.project-group{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    margin: auto;
+    gap: 4em;
+}
+
+.project-intro-p{
+    text-align: center;
+}
+
+.project-text-group{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
