@@ -1267,8 +1267,9 @@ header{
     transition: background 0.3s ease;
 }
 
-.project-intro-photo{
+.project-group img{
     margin: auto;
+    border-radius: var(--border-radius2);
 }
 
 .project-group{
@@ -1277,6 +1278,10 @@ header{
     width: 85%;
     margin: auto;
     gap: 4em;
+}
+
+.project-group h3{
+    text-align: center;
 }
 
 .project-intro-p{
@@ -1289,3 +1294,8 @@ header{
     gap: 1.5em;
 }
 
+@media screen and (min-width: 1024px){
+    .project-group img{
+        max-width: 900px;
+    }
+}
