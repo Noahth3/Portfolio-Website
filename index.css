@@ -528,6 +528,9 @@ img {
 }
 
 @media screen and (max-width: 768px){
+    .navbar{
+        min-height: 135px;
+    }
     .logo-container{
         font-size: 2rem;
     }
@@ -1201,7 +1204,7 @@ header{
 }
 
 #list-h2{
-    margin-top: 2em;
+    margin-top: 3.5em;
 }
 
 @media screen and (max-width: 890px){
@@ -1288,14 +1291,87 @@ header{
     text-align: center;
 }
 
-.project-text-group{
+.project-group ul{
     display: flex;
     flex-direction: column;
     gap: 1.5em;
+}
+
+.project-text-group{
+    display: flex;
+    flex-direction: column;
+    gap: 6em;
+    justify-content: center;
+    margin: auto;
+}
+
+.project-text-group0{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    margin: auto;
+
+}
+
+.project-text-group1{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    margin: auto;
+
+}
+
+.project-text-group2{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    margin: auto;
+
+}
+
+.project-text-group p{
+    text-align: center;
 }
 
 @media screen and (min-width: 1024px){
     .project-group img{
         max-width: 900px;
     }
+}
+
+.intern-text-group{
+    display: flex;
+    flex-direction: column;
+    gap: 6em;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+}
+
+.intern-text-group0{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    margin: auto;
+
+}
+
+.intern-text-group1{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    margin: auto;
+
+}
+
+.intern-text-group2{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    margin: auto;
+
 }
